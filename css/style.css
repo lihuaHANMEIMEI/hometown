@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=JetBrains+Mono&family=Liu+Jian+Mao+Cao&family=Open+Sans:wght@300&family=Poiret+One&display=swap');
+
+header{
+    position: relative;
+    z-index: 100;
+}
+.my_bg{
+    background: url(../images/bgp_1.jpg) ;
+    background-size: cover;
+    background-position: bottom;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 90vh;
+    padding:100px 20vw;
+    
+}
+.att_bg{
+    background: url(../images/att_bg.jpg) ;
+    background-size: cover;
+    background-position: bottom;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 90vh;
+    padding:100px 20vw;
+    
+}
+.eco_bg{
+    background: url(../images/eco_bg.jpg) ;
+    background-size: cover;
+    background-position: bottom;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 90vh;
+    padding:100px 20vw;
+    
+}
+.geo_bg{
+    background: url(../images/geo_bg.jpg) ;
+    background-size: cover;
+    background-position: bottom;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 90vh;
+    padding:100px 20vw;
+}
+.peo_bg{
+    background: url(../images/peo_bg.jpg) ;
+    background-size: cover;
+    background-position: bottom;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 90vh;
+    padding:100px 20vw;
+}
+body{
+    font-family: Poiret One !important ;
+}
+.h2{
+    font-family: Cinzel!important;
+}
+.my_bg h1{
+    margin-top: 20vh;
+    font-size: 15vh;
+    font-family:Liu Jian Mao Cao ;
+}
+.my_bg h2{
+    margin-top: 2vh;
+    font-size: 7vh;
+    font-family:JetBrains Mono  ;
+}
+
+section h2{
+    font-family: Cinzel ;
+}
+section {
+    font-family:Poiret One;
+}
+
+.curve{
+    position: absolute;
+    height: 225px;
+    width: 100%;
+    bottom: 0;
+    
+}
+.curve::before{
+    content:'';
+    display: block;
+    position: absolute;
+    border-radius: 100% 50%;
+    width: 55%;
+    height: 100%;
+    background-color: rgba(43, 59, 58, 0.605);
+    transform: translate(80%,60%);
+}
+.curve::after{
+    content: '';
+    display: block;
+    position: absolute;
+    border-radius: 100% 50%;
+    width: 55%;
+    height: 100%;
+    background-color: rgba(53, 179, 137, 0.406);
+    transform: translate(-4%,40%);
+}
+#menu{
+    width:60px;
+    border-radius: 50%;
+    position:fixed;
+    top:40px;
+    right:60px;
+    cursor: pointer;
+    z-index: 100;
+}
+#mymenu{
+    width:0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.8);
+    position:fixed;
+    top: 0;
+    right:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    z-index: 2;
+    border-bottom-left-radius: 100%;
+    transition: width 0.5s, height 0.5s,border-radius 0.5s;
+}
+#mymenu.open-mymenu{
+    width:100%;
+    height: 100vh;
+    border-bottom-left-radius: 0;
+    
+    
+}
+#mymenu.open-mymenu::before{
+    content:'';
+    display: block;
+    position: absolute;
+    border-radius: 100% 25%;
+    width: 55%;
+    height: 100%;
+    background-color: rgba(176, 213, 211, 0.468);
+    transform: translate(80%,60%);
+}
+#mymenu.open-mymenu::after{
+    content: '';
+    display: block;
+    position: absolute;
+    border-radius: 50% 50%;
+    width: 55%;
+    height: 100%;
+    background-color: rgba(77, 156, 117, 0.406);
+    transform: translate(-70%,30%);
+    z-index: -1;
+}
+#mymenu.open-mymenu ul li{
+    opacity: 1;
+    transform: translateY(0);
+    transition: transform 1s, opacity 1s;
+    transition-delay: 0.5s;
+}
+#mymenu ul li{
+    list-style: none;
+    margin:20px;
+    text-align: center;
+
+    opacity: 0;
+    transform: translateY(30px);
+
+}
+#mymenu ul li a{
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(153, 179, 153);
+    font-size: 50px;
+    font-weight: 600;
+    position: relative;
+    text-shadow: 0 0 0 rgb(108, 126, 108);
+    transition: text-shadow .6s ,transform 0.6s;
+}
+#mymenu ul li a:hover{
+    text-shadow: -3px 3px 0 rgb(108, 126, 108);
+    transform: translateY(-6px);
+}
+#mymenu ul li a::after{
+    content:'';
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(23, 34, 14, 0.37);
+    position: absolute;
+    bottom: 19px;
+    right: -18px;
+    opacity: 0;
+    box-shadow: 0 0 0 rgb(108, 126, 108);
+    transition: box-shadow 0.5s;
+}
+#mymenu ul li a:hover::after{
+    opacity: 1;
+    box-shadow: -3px 3px 0 rgb(108, 126, 108);
+}
+.background-wave{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+    z-index: 1;
+}
+
+.background-wave svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 168px;
+}
+
+.background-wave .shape-fill {
+    fill: #ffffff;
+}
+.spacer{
+    aspect-ratio: 960/300;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+.layer1{
+    background-image: url('../images/layer1.svg');
+}
+.layer2{
+    background-image: url('../images/layer2.svg');
+   
+}
+
+
+.fa {
+    padding: 0px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none !important;
+    margin: 5px 2px;
+    border-radius: 100% 50%;
+    transition: background  .9s, color 0.5s;
+  }
+
+  
+  .fa:hover {
+      opacity: 0.7;
+      color: #b8bbb9;
+  }
+  
+  .fa-facebook {
+    background: rgb(108, 126, 108);
+    color: white;
+  }
+  
+  .fa-twitter {
+    background: rgb(108, 126, 108);
+    color: white;
+  }
+  #contact{
+    background-color: #ffffff !important;
+  }
+
+  #footer_curve {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+#footer_curve svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 78px;
+    transform: rotateY(180deg);
+}
+
+#footer_curve .shape-fill {
+    fill: #778D7F;
+}
+
+#about a{
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.5s;
+}
+#about a:hover{
+    cursor: pointer;
+    color:#9fc5ad;
+}
